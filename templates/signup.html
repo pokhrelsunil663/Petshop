@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="h-screen w-full bg-cover bg-center" style="background-image: url('{% static 'image/bg.jpg' %}');">
+
+     <br>
+     <br>
+     <br>
+
+            <div class="flex justify-center items-center gap-3 flex-wrap">
+                 <div class="shadow-2xl bg-slate-300 rounded-lg p-5 h-[600px] w-[500px] border-l-2">
+                      <form action="action_page.php" style="border:1px solid #ccc">
+                         <div class="container">
+                              <center>
+                             <b> <h3>Sign Up</h3></b>
+                              <br>
+                              <hr>
+                              </center>
+                              
+                              <label for="email"><b>Email</b></label><hr>
+                              <input type="text" placeholder="Enter Email" name="email" required><br>
+                              
+                              <label for="psw"><b>Password</b></label><hr>
+                              <input type="password" placeholder="Enter Password" name="psw" required><br>
+                             
+                              <label for="psw-repeat"><b>Password</b></label><hr>
+                              <input type="password" placeholder="Password" name="psw-repeat" required><br>
+                           
+                              <label>
+                              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                              </label>
+                    
+                               <p>By creating an account you agree to our <a href="#" style="color:dodgerblue"><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Terms & Privacy</a>.</p>
+  
+                                  <div class="clearfix">
+                                          
+                                    <button type="submit " class=" bg-blue-500 p-2 rounded-md font-bold " class="signupbtn"  >Sign Up</button>
+                                  </div>
+                              
+                           </div>
+                       </form>
+                   </div>
+             </div>
+             
+          </div>
+{% endblock%}
+</body>
+</html>

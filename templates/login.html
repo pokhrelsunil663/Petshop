@@ -1,0 +1,112 @@
+
+{% load static %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="h-screen w-full bg-cover bg-center" style="background-image: url('{% static 'image/login.jpg' %}');">
+        <div style="color: white; font-size: 24px;font-family: Arial, sans-serif;"> 
+<nav class="h-14 w-screen  border-spacing-0 shadow-2xl flex navbar navbar-expand-md bg-transparent justify-around items-center">
+    
+    <br>
+
+    
+        <div>
+            <img src="{% static 'image/abc.jpg.png' %}" class="h-14S w-14 "></div>
+        <div>
+            <ul class="flex justify-center items-center gap-12">
+                <li><a href="{% url 'home' %}" class="link active" >Home</a></li>
+                <li><a href="{% url 'blog' %}" class="link" >Blog</a></li>
+                <li><a href="{% url 'shop' %}" class="link" >Shop</a></li>
+                <button><li><a href="{% url 'signin' %}" class="link" >Sign In</a></li></button>
+                <button><li><a href="{% url 'signup' %}" class="link" >Sign Up</a></li></button>
+                <li><a href="{% url 'login' %}" class="link" >Login</a></li>
+               
+               
+                
+                 </li>
+       
+            </ul>
+        </div>
+        <div>
+            <form method="get" action="{% url 'search' %}">
+                <input type="text" placeholder="Search" name="Search">
+                <input type="submit" value="Search">
+            </form>
+            
+        </div>
+
+    <ul class="flex justify-center items-end gap-12">
+        <div class="hamburger" id="hamburger">
+                    
+            <button><li><a href="#" class="link" >☰</button>
+                
+          
+        </div> 
+    </ul>
+
+        <div>
+            <button class=" p-2  rounded-lg  "><li><a href="{% url 'logout' %}" class="link" >LOG OUT</a></li></button>
+        </div>
+    </nav>
+
+<center>
+
+    <br>
+    <br>
+    <div class="flex justify-center items-center flex-wrap">
+        
+       
+        <div class="shadow-2xl  bg-transparent rounded-lg p-5 h-[520px] w-[400px] border-spacing-7  ">
+        
+            <div style="  width: 400px; height: 600px;">
+                <div style="font-size: 16px; padding: 20px; ">
+    <form>  
+<br>
+  
+        <div class="container"> 
+            <div style="color: white; font-size: 24px;font-family: Arial, sans-serif;"> 
+            <div class="header">
+                <h1>Login</h1>
+            </div>
+        </div>
+            <br>
+            <br>
+            <div class="form-container ">
+               
+                <div style="font-size: 18px; font-family: Arial, sans-serif;color: white;">
+                    <b>
+            <div><label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required></div>
+            <br>
+            <div><label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required></div></b>
+            <br>
+            <input type="checkbox" checked="checked"> Remember me <br>
+            <br>
+            <button type="submit " class="bg-blue-400 p-2 rounded font-semibold">Login</button>  <br> 
+            <br>
+           <button type="button" class="cancelbtn">Forget Password ? </button>  
+            <p>Don't have an account? <b><a href="{% url 'signup' %}">Sign Up</a></p> 
+        </div>
+
+
+        </div>   
+    
+ </div>
+ </div>
+</div>
+</form>
+</div>
+</center>
+
+</body>
+</html>

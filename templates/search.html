@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="h-14 w-screen bg-blue-400 flex justify-around items-center">
+    </nav>
+    <br>
+
+    <div class="flex justify-center items-center gap-3 flex-wrap">
+        {% for post in searched_data %}
+        <div class="shadow-2xl bg-slate-300 rounded-lg p-5 h-[450px] w-[320px] border-l-2">
+            <img src="{{post.image.url}}" ,class="h-42 w-58 ">
+            <h1 class="text-xl font-bold">{{post.title}}</h1>
+            <p>{{post.content | truncatechars_html:100 }}</p>
+
+            <button class="bg-blue-500 p-2 rounded-lg font-bold ">Read More</button>
+        </div>
+          
+         {% endfor %}
+    </div>
+
+</body>
+</html>

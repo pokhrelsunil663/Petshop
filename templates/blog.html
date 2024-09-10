@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<br>
+    <div class="flex justify-center items-center flex-wrap">
+        {% for post in post %}
+            <div class="shadow-2xl p-5 bg-blue-300 h-[450px] w-[320px]">
+                <img src="{{post.image.url}}" class="h-42 w-58 ">
+                <h1 class="text-xl font-bold">{{post.title}}</h1>
+                <p>{{post.content | truncatechars_html:100 }}</p>
+                <button class="bg-blue-500 p-2 rounded-lg">read more</button>
+            </div>
+        {% endfor %}
+        
+    </div>
+{% endblock %}
